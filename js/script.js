@@ -230,7 +230,7 @@ window.addEventListener('DOMContentLoaded', () => {
       const statusMessage = document.createElement('img');
       statusMessage.src = message.loading;
       statusMessage.style.cssText = `
-        display: block;
+        display: block; 
         margin: 0 auto;
       `;
       form.insertAdjacentElement('afterend', statusMessage);
@@ -297,4 +297,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // })
   //   .then((response) => response.json())
   //   .then((json) => console.log(json));
+  fetch('http://localhost:3000/menu')
+    .then((data) => data.json())
+    .then((res) => console.log(res));
 });
